@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- The title must be your Student ID -->
+  <title> HA140317 </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Molengo&family=Russo+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      background-color: LemonChiffon;
+    }
+
+    .logo {
+      font-family: 'Russo One', sans-serif;
+      font-size: 30px;
+    }
+
+    .nav-link {
+      font-family: 'Molengo', sans-serif;
+      font-size: 20px;
+    }
+
+    h2 {
+      font-family: 'Russo One', sans-serif;
+      font-size: 45px;
+      text-align: center;
+
+    }
+
+    h3 {
+      font-family: 'Happy Monkey', cursive;
+      font-size: 60px;
+      color: SeaGreen;
+    }
+
+    h4 {
+      font-family: 'Russo One', sans-serif;
+      font-size: 50px;
+      color: SeaGreen;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+
+    }
+
+
+
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .content {
+      margin-top: -14px;
+      margin-left: 40px;
+    }
+
+    .day3 {
+      margin-top: -14px;
+      margin-left: 40px;
+
+    }
+
+    h5 {
+      font-size: 40px;
+      color: LightSalmon;
+      font-family: 'Russo One', sans-serif;
+    }
+
+    .course {
+      font-family: 'Happy Monkey', cursive;
+      font-size: 20px;
+
+
+    }
+
+    p {
+      font-family: 'Happy Monkey', cursive;
+      font-size: 15px;
+    }
+
+    a{
+      color: white;
+    }
+
+    a:hover{
+      color: white;
+    }
+
+    .carousel-caption p {
+      color: white;
+      font-weight: bold;
+      padding: 0;
+    }
+
+    .content1 {
+      width: 80%;
+      margin-left: 10%;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: LightSalmon;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 20px;
+      padding: 10px;
+      width: 170px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 20px;
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -10px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 26px;
+    }
+
+    .button:hover span:after {
+      opacity: 2;
+      right: 0;
+    }
+
+    footer {
+
+
+      background-color: LightSalmon;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      text-align: center;
+      margin-top: 20px;
+
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    footer .container .noi-dung {
+      width: 100%;
+    }
+
+    footer .container .noi-dung h6 {
+      font-size: 30px;
+      font-family: 'Russo One'
+    }
+
+    .social-icon ul {
+      text-align: center;
+      padding: 2px;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 12px;
+      /* width: 20px; */
+      border-radius: 50px;
+      padding-top: 5px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+    .social-icon ul li {
+      list-style: none;
+      margin: 0 15px;
+    }
+
+    .social-icon ul li .fa {
+      font-size: 28px;
+      line-height: 55px;
+      transition: 6s;
+      color: #000;
+    }
+
+    .social-icon ul li .fa:hover {
+      color: #fff;
+    }
+
+    .social-icon ul li a {
+      position: relative;
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff;
+      text-align: center;
+      transition: .6s;
+      box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .social-icon ul li a:hover {
+      transform: translate(0, -10px);
+    }
+
+    .social-icon ul li:nth-child(1) a:hover {
+      background-color: #1877F2;
+    }
+
+    .social-icon ul li:nth-child(2) a:hover {
+      background-color: #1DA1F2;
+    }
+
+    .social-icon ul li:nth-child(3) a:hover {
+      background-color: #E4405F;
+    }
+  </style>
+
+
+
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-light" style="background-color: LightSalmon">
+    <!-- Brand/logo -->
+    <a class="logo" href="#" style="color: white" bold>Portfolio</a>
+    <!-- Links -->
+
+    <ul class="navbar-nav ml-auto" style="padding-right: 30px">
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: white">Home</a>
+
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: white">About me</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: white">Contact</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <div class="video-background">
+    <div class="carousel-caption">
+      <h2 style="color: white;"><b>Course portfolio for WDT401 - Web design 2</h2> </b>
+      <br>
+      <p style="font-size: 30px;">Name: Vu Khanh Huyen </p>
+      <p style="font-size: 30px">Student ID: HA140317</p>
+      <p style="font-size: 30px">Batch: GD1404</p>
+      <p style="font-size: 30px">Subject: WDT401</p>
+      <p style="font-size: 30px">Lecturer: Shruthi Thaiveppil Gopi</p>
+
+    </div>
+    <video src="https://thumbs.gfycat.com/AngelicCircularCapybara-mobile.mp4" muted loop autoplay width="100%"
+      height="20%">
+  </div>
+
+  <div class="container">
+    <br><br>
+    <h4>Web Design 2</h4>
+    <br>
+    <div class="course">
+      <p>Course :
+        Course Portfolio For WDT401 - Web design 2</p>
+
+      <p>Lecturer :
+        Shruthi Thaiveppil Gopi</p>
+
+      <p>Batch :
+        GD1404</p>
+    </div>
+    <br><br>
+
+    <div class="row">
+
+
+      <div class="col" style="padding-left:36">
+        <div class="content">
+          <h5>
+            ABOUT THIS SUBJECT</h5>
+        </div>
+        <section>
+
+          <div class="row">
+            <div class="column">
+              <p>Web design 2 is an interesting subject. Before this course I cannot belive that oneday I can make a
+                website for myself actually I think my website is not cool (me after 2 lessons) . But I feel so good
+                when I learned a new things and understanding all codes with my all attention. Now I can create my
+                website better and know to fix errors. </p>
+              <p>I want to say "Thank Mrs.Shruthi" to teaching us . You are so amazinggggggg </p>
+              <br>
+              <h5>HERE ARE MY WORKS DONE FROM THIS COURSE</h5>
+
+              <section class="content1">
+                <h6 style="padding-right :10px; font-size: 35px; font-family: 'Happy Monkey', cursive;">Day 1</h6>
+                <div class="row">
+                  <div class="column">
+                    <p>This is the first coding session. I learned about the simplest, easiest lines of code.I learn
+                      HTML basics and styles. What I did in this class was how to write text, change colors and add
+                      pictures.</p>
+                    <button class="button" style="vertical-align:middle"><a href="Activities1.html"><span>View more
+                        </span></a>
+                  </div>
+                  <div class="row">
+                    <div class="column">
+                      <br>
+                      <h6 style="padding-right :10px; font-size: 35px; font-family: 'Happy Monkey', cursive;;">Day 2
+                      </h6>
+                      <p style=>Second day of learning coding. Getting used to Bootstrap 4. Learning how to create
+                        navigation bar, place image, image slide using "carousel code."</p>
+                      <button class="button" style="vertical-align:middle"><a href="homesoupday2.html"><span>View more
+                          </span></a>
+                    </div>
+
+                  </div>
+              </section>
+              <br>
+
+              <div class="col">
+                <h6 style="padding-right :10px; font-size: 35px; font-family: 'Happy Monkey', cursive;">Day 3</h6>
+                <p>I learned how to add a footer into the website, how to link websites, create social media icons .
+                </p>
+                <button class="button" style="vertical-align:middle"><a href="homesoup1.html"><span>View more
+                    </span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <br>
+            <h6 style="padding-right :10px; font-size: 35px; font-family: 'Happy Monkey', cursive;">Day 4-5-6</h6>
+            <p>We create Spa websign and learn how to put video in landing page and detaling the Spa website and then
+              find the bug and fixed it.</p>
+            <button class="button" style="vertical-align:middle"><a href="index.html"><span>View more </span></a>
+          </div>
+          <h6 style="padding-right :10px; font-size: 35px; font-family: 'Happy Monkey', cursive;">Day 7</h6>
+          <p>Day 7 is this website .We find the bug and fixed it then post in Github and learned how to fix the image
+            source in github.</p>
+      </div>
+    </div>
+    </section>
+    </section>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="noi-dung">
+        <h6>Contact</h6>
+        <div class="social-icon">
+          <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=100023997710092"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li><a href="https://twitter.com/kenken271000"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/__vukhanhhuyen/"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+          <p>Disclaimer : This website has been done as a part of Assignment, this company base on this website does
+            not exist.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+
+
+
+</html>
